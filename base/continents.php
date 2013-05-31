@@ -29,7 +29,9 @@ function continents_declarer_tables_principales($tables_principales){
         "maj"       => "TIMESTAMP");
     
     $spip_continents_key = array(
-        "PRIMARY KEY" => "id_continent");
+        "PRIMARY KEY" => "id_continent",
+        "KEY code_onu" => "code_onu",        
+        );
         
 
     $tables_principales['spip_continents'] = array(
@@ -40,8 +42,12 @@ function continents_declarer_tables_principales($tables_principales){
         )
         );
     
-    $tables_principales['spip_pays']['field']['id_continent']= "SMALLINT NOT NULL";
-        
+    $tables_principales['spip_pays']=array(
+        'field'=>array('id_continent'=>"SMALLINT NOT NULL"),
+        'key'=>array('KEY id_continent'=>"id_continent"),        
+        'join'=>array('id_continent'=>"id_continent"),      
+    );
+  
     return $tables_principales;
 }
 
