@@ -6,7 +6,8 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
-	'continents_titre' => 'Continents',
+	'continent_titre' => 'Continent',
+	'continents_titre' => 'Continents',	
 );
 
 ?>
