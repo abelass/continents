@@ -20,8 +20,8 @@ function peupler_base_continents() {
 				array('id_continent'=>'4','code_onu'=>'142','nom'=>'<multi>[fr]Asie[en]Asia[es]Asia[de]Asien</multi>','latitude'=>40,'longitude'=>90,'zoom'=>3),
 				array('id_continent'=>'5','code_onu'=>'150','nom'=>'<multi>[fr]Europe[es]Europa[de]Europa</multi>','latitude'=>50,'longitude'=>20,'zoom'=>4),
 				array('id_continent'=>'6','code_onu'=>'9','nom'=>'<multi>[fr]Océanie[en]Oceania[es]Oceania[de]Ozeanien</multi>','latitude'=>-30,'longitude'=>150,'zoom'=>4),
-				 array('id_continent'=>'7','code_onu'=>'','nom'=>'<multi>[fr]Antarctique[en]Antarctica[es]Antártida[de]Antarktika</multi>','latitude'=>-80,'longitude'=>70,'zoom'=>3),
-				 array('id_continent'=>'8','code_onu'=>'19','nom'=>'<multi>[fr]Amérique[en]Americas[de]Amerika</multi>','latitude'=>0,'longitude'=>-70,'zoom'=>2),
+				array('id_continent'=>'7','code_onu'=>'','nom'=>'<multi>[fr]Antarctique[en]Antarctica[es]Antártida[de]Antarktika</multi>','latitude'=>-80,'longitude'=>70,'zoom'=>3),
+				array('id_continent'=>'8','code_onu'=>'19','nom'=>'<multi>[fr]Amérique[en]Americas[de]Amerika</multi>','latitude'=>0,'longitude'=>-70,'zoom'=>2),
 		)
 	);
 }
@@ -280,4 +280,39 @@ function inserer_table_pays() {
 
 }
 
-function inserer_codes_iso
+function inserer_codes_iso () {
+	$codes = [
+		1 => [
+			'code_iso_a2' => 'AF',
+			'code_iso_a3' => 'AFR',
+		],
+		2 => [
+			'code_iso_a2' => 'NA',
+			'code_iso_a3' => 'NAM',
+		],
+		3 => [
+			'code_iso_a2' => 'SA',
+			'code_iso_a3' => 'SAM',
+		],
+		4 => [
+			'code_iso_a2' => 'AS',
+			'code_iso_a3' => 'ASA',
+		],
+		5 => [
+			'code_iso_a2' => 'EU',
+			'code_iso_a3' => 'EUR',
+		],
+		6 => [
+			'code_iso_a2' => 'OC',
+			'code_iso_a3' => 'OCA',
+		],
+		7 => [
+			'code_iso_a2' => 'AQ',
+			'code_iso_a3' => 'ATA',
+		],
+	];
+
+	foreach ($codes AS $id_continent => $set) {
+		sql_updateq('spip_continents', $set, 'id_continent=' . $id_continent);
+	}
+}
