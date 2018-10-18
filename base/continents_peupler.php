@@ -14,12 +14,12 @@ function peupler_base_continents() {
 	sql_insertq_multi('spip_continents', array(
 		array('id_continent'=>'1','code_onu'=>'2','nom'=>'<multi>[fr]Afrique[en]Africa[es]Africa[de]Afrika</multi>','latitude'=>0,'longitude'=>'20','zoom'=>3),
         array('id_continent'=>'2','code_onu'=>'3','nom'=>'<multi>[fr]Amérique du Nord[en]North America[es]Norteamérica[de]Nordamerika</multi>','latitude'=>40,'longitude'=>-100,'zoom'=>3),
-        array('id_continent'=>'3','code_onu'=>'5','nom'=>'<multi>[fr]Amérique du Sud[en]South America[de]Südamerika</multi>','latitude'=>-20,'longitude'=>-60,'zoom'=>3), 
-        array('id_continent'=>'4','code_onu'=>'142','nom'=>'<multi>[fr]Asie[en]Asia[es]Asia[de]Asien</multi>','latitude'=>40,'longitude'=>90,'zoom'=>3), 
-        array('id_continent'=>'5','code_onu'=>'150','nom'=>'<multi>[fr]Europe[es]Europa[de]Europa</multi>','latitude'=>50,'longitude'=>20,'zoom'=>4),  
+        array('id_continent'=>'3','code_onu'=>'5','nom'=>'<multi>[fr]Amérique du Sud[en]South America[de]Südamerika</multi>','latitude'=>-20,'longitude'=>-60,'zoom'=>3),
+        array('id_continent'=>'4','code_onu'=>'142','nom'=>'<multi>[fr]Asie[en]Asia[es]Asia[de]Asien</multi>','latitude'=>40,'longitude'=>90,'zoom'=>3),
+        array('id_continent'=>'5','code_onu'=>'150','nom'=>'<multi>[fr]Europe[es]Europa[de]Europa</multi>','latitude'=>50,'longitude'=>20,'zoom'=>4),
         array('id_continent'=>'6','code_onu'=>'9','nom'=>'<multi>[fr]Océanie[en]Oceania[es]Oceania[de]Ozeanien</multi>','latitude'=>-30,'longitude'=>150,'zoom'=>4),
          array('id_continent'=>'7','code_onu'=>'','nom'=>'<multi>[fr]Antarctique[en]Antarctica[es]Antártida[de]Antarktika</multi>','latitude'=>-80,'longitude'=>70,'zoom'=>3),
-         array('id_continent'=>'8','code_onu'=>'19','nom'=>'<multi>[fr]Amérique[en]Americas[de]Amerika</multi>','latitude'=>0,'longitude'=>-70,'zoom'=>2),         
+         array('id_continent'=>'8','code_onu'=>'19','nom'=>'<multi>[fr]Amérique[en]Americas[de]Amerika</multi>','latitude'=>0,'longitude'=>-70,'zoom'=>2),
 		)
 	);
 }
@@ -274,8 +274,7 @@ function inserer_table_pays() {
     foreach ($pays_continent as $id_pays => $id_continent) {
         sql_updateq('spip_pays',array('id_continent'=>$id_continent),'id_pays='.$id_pays);
     }
-        
+
 
 }
 
-?>
