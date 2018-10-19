@@ -19,7 +19,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Afrique[en]Africa[es]Africa[de]Afrika</multi>',
 			'latitude' => 0,
 			'longitude' => '20',
-			'zoom' => 3
+			'zoom' => 3,
+			'code_iso_a2' => 'AF',
+			'code_iso_a3' => 'AFR'
 		),
 		array(
 			'id_continent' => '2',
@@ -27,7 +29,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Amérique du Nord[en]North America[es]Norteamérica[de]Nordamerika</multi>',
 			'latitude' => 40,
 			'longitude' => -100,
-			'zoom' => 3
+			'zoom' => 3,
+			'code_iso_a2' => 'NA',
+			'code_iso_a3' => 'NAM'
 		),
 		array(
 			'id_continent' => '3',
@@ -35,7 +39,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Amérique du Sud[en]South America[de]Südamerika</multi>',
 			'latitude' => -20,
 			'longitude' => -60,
-			'zoom' => 3
+			'zoom' => 3,
+			'code_iso_a2' => 'SA',
+			'code_iso_a3' => 'SAM'
 		),
 		array(
 			'id_continent' => '4',
@@ -43,7 +49,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Asie[en]Asia[es]Asia[de]Asien</multi>',
 			'latitude' => 40,
 			'longitude' => 90,
-			'zoom' => 3
+			'zoom' => 3,
+			'code_iso_a2' => 'AS',
+			'code_iso_a3' => 'ASA'
 		),
 		array(
 			'id_continent' => '5',
@@ -51,7 +59,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Europe[es]Europa[de]Europa</multi>',
 			'latitude' => 50,
 			'longitude' => 20,
-			'zoom' => 4
+			'zoom' => 4,
+			'code_iso_a2' => 'EU',
+			'code_iso_a3' => 'EUR'
 		),
 		array(
 			'id_continent' => '6',
@@ -59,7 +69,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Océanie[en]Oceania[es]Oceania[de]Ozeanien</multi>',
 			'latitude' => -30,
 			'longitude' => 150,
-			'zoom' => 4
+			'zoom' => 4,
+			'code_iso_a2' => 'OC',
+			'code_iso_a3' => 'OCA'
 		),
 		array(
 			'id_continent' => '7',
@@ -67,7 +79,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Antarctique[en]Antarctica[es]Antártida[de]Antarktika</multi>',
 			'latitude' => -80,
 			'longitude' => 70,
-			'zoom' => 3
+			'zoom' => 3,
+			'code_iso_a2' => 'AQ',
+			'code_iso_a3' => 'ATA'
 		),
 		array(
 			'id_continent' => '8',
@@ -75,7 +89,9 @@ function peupler_base_continents() {
 			'nom' => '<multi>[fr]Amérique[en]Americas[de]Amerika</multi>',
 			'latitude' => 0,
 			'longitude' => -70,
-			'zoom' => 2
+			'zoom' => 2,
+			'code_iso_a2' => '',
+			'code_iso_a3' => ''
 		)
 	));
 }
