@@ -11,8 +11,8 @@
 if (!defined("_ECRIRE_INC_VERSION"))
 	return;
 
-function peupler_base_continents() {
-	sql_insertq_multi('spip_continents', array(
+function continents_definitions() {
+	return array(
 		array(
 			'id_continent' => '1',
 			'code_onu' => '2',
@@ -83,17 +83,13 @@ function peupler_base_continents() {
 			'code_iso_a2' => 'AQ',
 			'code_iso_a3' => 'ATA'
 		),
-		array(
-			'id_continent' => '8',
-			'code_onu' => '19',
-			'nom' => '<multi>[fr]Amérique[en]Americas[de]Amerika</multi>',
-			'latitude' => 0,
-			'longitude' => -70,
-			'zoom' => 2,
-			'code_iso_a2' => '',
-			'code_iso_a3' => ''
-		)
-	));
+	);
+}
+
+
+function peupler_base_continents() {
+	$definitions = continents_definitions();
+	sql_insertq_multi('spip_continents', $definitions);
 }
 
 function inserer_table_pays() {
@@ -352,38 +348,14 @@ function inserer_table_pays() {
 }
 
 function inserer_codes_iso() {
-	$codes = [
-		1 => [
-			'code_iso_a2' => 'AF',
-			'code_iso_a3' => 'AFR'
-		],
-		2 => [
-			'code_iso_a2' => 'NA',
-			'code_iso_a3' => 'NAM'
-		],
-		3 => [
-			'code_iso_a2' => 'SA',
-			'code_iso_a3' => 'SAM'
-		],
-		4 => [
-			'code_iso_a2' => 'AS',
-			'code_iso_a3' => 'ASA'
-		],
-		5 => [
-			'code_iso_a2' => 'EU',
-			'code_iso_a3' => 'EUR'
-		],
-		6 => [
-			'code_iso_a2' => 'OC',
-			'code_iso_a3' => 'OCA'
-		],
-		7 => [
-			'code_iso_a2' => 'AQ',
-			'code_iso_a3' => 'ATA'
-		]
-	];
-
-	foreach ($codes as $id_continent => $set) {
-		sql_updateq('spip_continents', $set, 'id_continent=' . $id_continent);
+	$definitions = continents_definitions();
+	foreach ($definitions as $id_continent => $codes) {
+		sql_updateq(
+				'spip_continents',
+				array(
+					'code_iso_a2' => $codes['code_iso_a2'],
+					'code_iso_a3' => $codes['code_iso_a3'],
+				),
+				'id_continent=' . $id_continent);
 	}
 }
